@@ -7,7 +7,7 @@ const passwordSchema = zod.string().min(6);
 
 function signJwt(username, password) {
     const usernameResponse = emailSchema.safeParse(username);
-    const passResponse = passwordSchema.safeParse(password);
+    const passResponse = passwordSchema.safeParse(password); 
 
     if (!usernameResponse.success || !passResponse.success) {
         return null;
